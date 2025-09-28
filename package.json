@@ -1,0 +1,26 @@
+{
+	"name": "video-with-text-track",
+	"version": "0.1.0",
+	"description": "Displays a muted video with a synced text track beside it.",
+	"author": "Marin Carroll",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php --blocks-manifest",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php --blocks-manifest"
+	},
+	"devDependencies": {
+		"@wordpress/block-editor": "^15.4.0",
+		"@wordpress/components": "^30.4.0",
+		"@wordpress/data": "^10.31.0",
+		"@wordpress/element": "^6.31.0",
+		"@wordpress/i18n": "^6.4.0",
+		"@wordpress/scripts": "^30.24.0",
+		"gsap": "^3.13.0"
+	}
+}

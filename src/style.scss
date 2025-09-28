@@ -1,0 +1,88 @@
+.video-text-track {
+	box-sizing: border-box;
+	padding-block: var(--wp--custom--spacing--80);
+}
+
+.video-text-track.alignfull {
+
+	@media screen and (min-width: 600px) {
+		padding-inline: var(--wp--custom--spacing--80);
+	}
+}
+
+.video-text-track__inner {
+	display: flex;
+	gap: var(--wp--custom--spacing--30) var(--wp--custom--spacing--60);
+
+	@media screen and (max-width: 599.9px) {
+		flex-direction: column;
+	}
+}
+
+.video-text-track .wp-block-video {
+	flex: 1;
+}
+
+.video-text-track .wp-block-video video {
+	display: block;
+}
+
+.video-text-track video::cue {
+	font-family: var(--wp--preset--font-family--impact);
+	font-size: var(--wp--custom--font-size--x-large);
+}
+
+.video-text-track__text {
+	flex-basis: 350px;
+	position: relative;
+
+	--fade-height: 60px;
+
+	@media screen and (max-width: 599.9px) {
+		padding-inline: var(--wp--custom--spacing--60);
+	}
+}
+
+// TODO only hide the primary text track if there's more than one.
+.video-text-track video:not(:fullscreen)::cue {
+	visibility: hidden;
+}
+
+.video-text-track__text::before,
+.video-text-track__text::after {
+	content: "";
+	display: block;
+	height: var(--fade-height);
+	left: 0;
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+
+.video-text-track__text::before {
+	background: linear-gradient(to bottom, var(--wp--custom--color--background), transparent);
+	top: 0;
+}
+
+.video-text-track__text::after {
+	background: linear-gradient(to top, var(--wp--custom--color--background), transparent);
+	bottom: 0;
+}
+
+.video-text-track__scroller {
+	display: flex;
+	flex-direction: column;
+	font-family: var(--wp--preset--font-family--impact);
+	font-size: var(--wp--custom--font-size--x-large);
+	gap: var(--wp--custom--spacing--30);
+	inset: 0;
+	line-height: 1.2;
+	overflow-y: hidden;
+	padding-block: 50% var(--fade-height);
+	position: absolute;
+}
+
+.video-text-track__text span {
+	display: block;
+}
+

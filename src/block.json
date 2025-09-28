@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "marincarroll/video-with-text-track",
+	"version": "0.1.0",
+	"title": "Video with Text Track",
+	"category": "media",
+	"icon": "playlist-video",
+	"description": "Displays a muted video with a synced text track beside it.",
+	"example": {},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"html": false
+	},
+	"textdomain": "video-with-text-track",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
